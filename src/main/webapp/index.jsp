@@ -1,85 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+   pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+   <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<script type="text/javascript">
-	
-	function getImgCode() {
-		var xhr = new XMLHttpRequest();
-		xhr.open("GET", "getCode", true);
-		xhr.onreadystatechange = function(){
-		    if (xhr.readyState == 4) {
-		        if (xhr.status == 200) {
-		            var text = xhr.responseText;
-		            console.log(text);
-		            document.getElementById("imgUrl").src = text;
-		        }
-		    }
-		};
-		xhr.send(null);
-	}
-
-	function login() {
-		var username = document.getElementById("username").value;
-		var password = document.getElementById("password").value;
-		var code = document.getElementById("imgCode").value;
-		console.log(username, password, code);
-		
-		var xhr = new XMLHttpRequest();
-		var getUrl = "login?username="+username+"&password="+password+"&imgCode="+code;
-		console.info(getUrl);
-		xhr.open("GET", getUrl, true);
-		xhr.onreadystatechange = function(){
-		    if (xhr.readyState == 4) {
-		        if (xhr.status == 200) {
-		            var text = xhr.responseText;
-		            console.log(text);
-		        }
-		    }
-		};
-		xhr.send(null);
-	}
-	
-	function exportXlsx() {
-		
-		var xhr = new XMLHttpRequest();
-		xhr.open("GET", "exportXlsx", true);
-		xhr.onreadystatechange = function(){
-		    if (xhr.readyState == 4) {
-		        if (xhr.status == 200) {
-		            var text = xhr.responseText;
-		            console.log(text);
-		            document.getElementById("report").href = text;
-		        }
-		    }
-		};
-		xhr.send(null);
-	}
-	
-	window.onload = function () {
-		console.log("load...");
-	}
-	
-	</script>
-
+<title>Hello World</title>
 </head>
 <body>
-<h2>Hello World!</h2>
-<hr>
-
-	<label>username:</label>
-	<input id="username"/><br>
-	
-	<label>password:</label>
-	<input type="password" id="password"/><br>
-	
-	<label>imagecode:</label>
-	<input id="imgCode"/><br>
-	
-	<input type="button" value="getImg" id="getImgCode" onclick="getImgCode()" style="width:80;height:30;" /><br>
-	<input type="button"  value="lgoin&sign"  id="login" onclick="login()" style="width:80;height:30;"/>
-	<img alt="	imgCode" id="imgUrl" src=""> <br>
-	<input type="button"  value="exportReport"  id="export" onClick="exportXlsx()" style="width:80;height:30;" /><br>
-
-	<a id="report" href="">click and download report</a>
-	
+   <h1>Hello World From Struts2</h1>
+   <form action="hello">
+      <label for="name">Please enter your name</label><br/>
+      <input type="text" name="name"/>
+      <input type="submit" value="Say Hello"/>
+   </form>
 </body>
 </html>

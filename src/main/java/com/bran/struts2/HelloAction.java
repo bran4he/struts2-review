@@ -5,6 +5,7 @@ public class HelloAction {
 	private String name;
 
 	public String execute() throws Exception {
+		System.out.println("action receive name is:" + this.name);
 		return "success";
 	}
 
