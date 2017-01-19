@@ -1,11 +1,14 @@
-<%@ page contentType="text/html; charset=UTF-8" %>
-
-<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <html>
-<head>
-<title>Hello World</title>
-</head>
+<head></head>
 <body>
-   Hello World, <s:property value="name"/>
+	<h1>Struts 2 Hello World Example</h1>
+ 
+	<h4>
+		Hello!!
+		<s:property value="name" />
+	</h4>
+ 
 </body>
 </html>

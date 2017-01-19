@@ -6,7 +6,7 @@
 	<h1>Struts 2 Hello World Example</h1>
  
 	<h4>
-		Hello!!
+		Hello!! this is redirect!
 		<s:property value="name" />
 	</h4>
  
